@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  moralis-boilerplate:
+    build:
+      context: .
+    network_mode: bridge
+    container_name: moralis-boilerplate
+    restart: on-failure
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app/src:/app/src
